@@ -23,6 +23,11 @@ to scan I2C buss looking for the LCD address.
 
 1 Apr 2021 - Changed driver to not use the backlight bit when writing to the LCD
 
+## backlighton.py   and  backlightoff.py
+
+   Added control programs for manual control of backlight.]
+
+   
 ## Install
 
 Install smbus
