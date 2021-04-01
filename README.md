@@ -2,7 +2,11 @@
 
 Programs to display some data on an LCD display connected to a Raspberry Pi at bootup and
 during operation.  Of interest are the date/time and the IP address.  The
-hostname is also displayed.  I use 3 character hostnames for the two RPi computers with an LCD display.
+hostname is also displayed.  I use 3 character hostnames for the three RPi computers with LCD displays.
+
+
+   Removed the checks for backlight off, it still isn't right.
+   
 
 ## showIP.py:
 
