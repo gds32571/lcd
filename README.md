@@ -8,6 +8,9 @@ hostname is also displayed.  I use 3 character hostnames for the two RPi comp0ut
 
 The main program
 
+1 Apr 2021 - Checks for existence of an "off" file to control whether backlight is on or o0ff.
+ 
+
 ## getIP:
 
 Program to read ifconfig and retrieve the IP address for the interface in
@@ -17,6 +20,8 @@ use.  You must edit the 4th and 8th fields to reflect either eth0 or wlan0.
 
 The driver file.  Look inside here to see how to install smbus and also how
 to scan I2C buss looking for the LCD address.
+
+1 Apr 2021 - Changed driver to not use the backlight bit when writing to the LCD
 
 ## Install
 

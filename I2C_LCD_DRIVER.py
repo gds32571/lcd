@@ -130,11 +130,13 @@ class lcd:
    def lcd_strobe(self, data):
       self.lcd_device.write_cmd(data | En | LCD_BACKLIGHT)
       sleep(.0005)
-      self.lcd_device.write_cmd(((data & ~En) | LCD_BACKLIGHT))
+#      self.lcd_device.write_cmd(((data & ~En) | LCD_BACKLIGHT))
+      self.lcd_device.write_cmd(((data & ~En) ))
       sleep(.0001)
 
    def lcd_write_four_bits(self, data):
-      self.lcd_device.write_cmd(data | LCD_BACKLIGHT)
+#      self.lcd_device.write_cmd(data | LCD_BACKLIGHT)
+      self.lcd_device.write_cmd(data)
       self.lcd_strobe(data)
 
    # write a command to lcd

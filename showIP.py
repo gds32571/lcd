@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import pathlib
+
 import I2C_LCD_DRIVER
 from datetime import datetime
 from time import sleep
@@ -45,6 +47,7 @@ while(1):
 #    global host_name
     while (oldsec == datetime.now().second):
         sleep(0.1)
+
     if oldmin != datetime.now().minute:
 
         oldmin = datetime.now().minute
@@ -61,5 +64,14 @@ while(1):
 
     myDatetime = datetime.now().strftime("%H:%M:%S")
     myLCD.lcd_display_string(myDatetime,1,0)
+    while (1):
+        file = pathlib.Path("off")
+        if file.exists ():
+          myLCD.backlight(0)
+        else:
+          myLCD.backlight(1)
 
+
+        
+        
         
