@@ -40,13 +40,6 @@ pp.close
 print(host_name)
 #print (len(host_name))
 
-def check_bl():
-    file = pathlib.Path("off")
-    if file.exists ():
-      myLCD.backlight(0)
-    else:
-      myLCD.backlight(1)
-
 oldsec = datetime.now().second
 oldmin = datetime.now().minute - 1
 
@@ -63,16 +56,12 @@ while(1):
 
         #myLCD.lcd_clear()
         myLCD.lcd_display_string("                ",2,0)
-#        check_bl
         sleep(0.1)
         myLCD.lcd_display_string(host_ip,2,0)
-#        check_bl
         myLCD.lcd_display_string(host_name,1,13)
-#        check_bl
    
     oldsec = datetime.now().second
 
     myDatetime = datetime.now().strftime("%H:%M:%S")
     myLCD.lcd_display_string(myDatetime,1,0)
-#    check_bl
     
