@@ -2,18 +2,11 @@
 
 Programs to display some data on an LCD display connected to a Raspberry Pi at bootup and
 during operation.  Of interest are the date/time and the IP address.  The
-hostname is also displayed.  I use 3 character hostnames for the three RPi computers with LCD displays.
-
-
-   Removed the checks for backlight off, it still isn't right.
-   
+hostname is also displayed.  I use 3 character hostnames for the two RPi comp0uters with an LCD display.
 
 ## showIP.py:
 
 The main program
-
-1 Apr 2021 - Checks for existence of an "off" file to control whether backlight is on or o0ff.
- 
 
 ## getIP:
 
@@ -25,13 +18,6 @@ use.  You must edit the 4th and 8th fields to reflect either eth0 or wlan0.
 The driver file.  Look inside here to see how to install smbus and also how
 to scan I2C buss looking for the LCD address.
 
-1 Apr 2021 - Changed driver to not use the backlight bit when writing to the LCD
-
-## backlighton.py   and  backlightoff.py
-
-   Added control programs for manual control of backlight.]
-
-   
 ## Install
 
 Install smbus
